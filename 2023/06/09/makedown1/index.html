@@ -41,11 +41,11 @@
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/2023/06/09/makedown1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="spark（local环境部署）1. Anaconda On Linux 安装 (单台服务器)  上传安装包: Anaconda3-2021.05-Linux-x86_64.sh(路径：&#x2F;export&#x2F;server&#x2F;) 安装: sh .&#x2F;Anaconda3-2021.05-Linux-x86_64.sh &gt;&gt;&gt;     直接回车 –Mor">
+<meta property="og:description" content="spark（local环境部署）1. Anaconda On Linux 安装 (单台服务器)  上传安装包: Anaconda3-2021.05-Linux-x86_64.sh(路径：&#x2F;export&#x2F;server&#x2F;) 安装: 1sh .&#x2F;Anaconda3-2021.05-Linux-x86\_64.sh &gt;&gt;&gt;     直接回车 –More–">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-09T15:38:15.992Z">
-<meta property="article:modified_time" content="2023-06-11T08:39:37.659Z">
+<meta property="article:modified_time" content="2023-06-11T09:29:33.222Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1686474721165),
+    lastupdate: new Date(1686475875475),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2476,15 +2476,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <p>上传安装包: Anaconda3-2021.05-Linux-x86_64.sh(路径：&#x2F;export&#x2F;server&#x2F;)</p>
 <p>安装:</p>
-<p>sh .&#x2F;Anaconda3-2021.05-Linux-x86_64.sh</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh ./Anaconda3-2021.05-Linux-x86\_64.sh</span><br></pre></td></tr></table></figure>
 <p>&gt;&gt;&gt;     直接回车</p>
 <p>–More–  按空格</p>
-<p>Do you accept the license terms?[yes|no]</p>
-<p>[No] &gt;&gt;&gt;    yes</p>
-<p>[&#x2F;root&#x2F;anaconda3] &gt;&gt;&gt;   &#x2F;export&#x2F;server&#x2F;anaconda3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Do you accept the license terms?[yes|no]</span><br><span class="line"></span><br><span class="line">[No] &gt;&gt;&gt;    yes</span><br><span class="line"></span><br><span class="line">[/root/anaconda3] &gt;&gt;&gt;   /export/server/anaconda3</span><br></pre></td></tr></table></figure>
 <p>(这里是问你Anaconda3装在哪里，推荐在&#x2F;export&#x2F;server&#x2F;anaconda3)</p>
-<p>by running conda init? [yes|no]</p>
-<p>[no] &gt;&gt;&gt;   yes  (询问是否要初始化，输入yes)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">by running conda init? [yes|no]</span><br><span class="line"></span><br><span class="line">[no] &gt;&gt;&gt;   yes  (询问是否要初始化，输入yes)</span><br></pre></td></tr></table></figure>
 <p>安装完成后, 退出finalshell重新进来<br><img src="/../images/130.png" class="lazyload" data-srcset="/../images/130.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 130"><br>看到这个Base开头表明安装好了.</p>
 <p>base是默认的虚拟环境.</p>
 <p>2. Windows系统配置Anaconda</p>
@@ -2497,71 +2494,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Anaconda默认源服务器在国外, 网速比较慢, 配置国内源加速网络下载.</p>
 <p>打开上图中的 <code>Anaconda Prompt</code>程序:</p>
 <p>执行:</p>
-<p>conda config –set show_channel_urls yes</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --set show\_channel\_urls yes</span><br></pre></td></tr></table></figure>
+
+
 <p>然后用记事本打开:</p>
 <p><code>C:\Users\用户名\.condarc</code>文件, 将如下内容替换进文件内,保存即可:</p>
-<p>channels:</p>
-<p><code>  </code>- defaults</p>
-<p>show_channel_urls: true</p>
-<p>default_channels:</p>
-<p><code>  </code>- <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</a></p>
-<p><code>  </code>- <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</a></p>
-<p><code>  </code>- <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</a></p>
-<p>custom_channels:</p>
-<p><code>  </code>conda-forge: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</a></p>
-<p><code>  </code>msys2: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</a></p>
-<p><code>  </code>bioconda: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</a></p>
-<p><code>  </code>menpo: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</a></p>
-<p><code>  </code>pytorch: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</a></p>
-<p><code>  </code>simpleitk: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line"></span><br><span class="line">`  `- defaults</span><br><span class="line"></span><br><span class="line">show\_channel\_urls: true</span><br><span class="line"></span><br><span class="line">default\_channels:</span><br><span class="line"></span><br><span class="line">`  `- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line"></span><br><span class="line">`  `- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br><span class="line"></span><br><span class="line">`  `- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span><br><span class="line"></span><br><span class="line">custom\_channels:</span><br><span class="line"></span><br><span class="line">`  `conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
 <p>5. 创建虚拟环境</p>
 <p># 创建虚拟环境 pyspark, 基于Python 3.8</p>
-<p>conda create -n pyspark python&#x3D;3.8</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pyspark python=3.8</span><br></pre></td></tr></table></figure>
 <p># 切换到虚拟环境内</p>
-<p>conda activate pyspark</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate pyspark</span><br></pre></td></tr></table></figure>
 <p># 在虚拟环境内安装包</p>
-<p>pip install pyhive pyspark jieba -i <a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a><br><img src="/../images/137.png" class="lazyload" data-srcset="/../images/137.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 137"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyhive pyspark jieba -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/137.png" class="lazyload" data-srcset="/../images/137.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 137"></p>
 <ol start="2">
 <li>上传、解压spark安装包</li>
 </ol>
 <p>路径：&#x2F;export&#x2F;server&#x2F;</p>
 <p>上传成功后，解压安装包</p>
-<p>tar -zxvf spark-3.2.0-bin-hadoop3.2.tgz -C &#x2F;export&#x2F;server&#x2F;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf spark-3.2.0-bin-hadoop3.2.tgz -C /export/server/</span><br></pre></td></tr></table></figure>
 <p>建立软连接</p>
-<p>ln -s &#x2F;export&#x2F;server&#x2F;spark-3.2.0-bin-hadoop3.2 &#x2F;export&#x2F;server&#x2F;spark</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /export/server/spark-3.2.0-bin-hadoop3.2 /export/server/spark</span><br></pre></td></tr></table></figure>
 <ol>
-<li>配置环境变量</li>
+<li>配置环境变量<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line">#JAVA\_HOME</span><br><span class="line"></span><br><span class="line">export JAVA\_HOME=/export/server/jdk1.8.0\_241  </span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$JAVA\_HOME/bin  </span><br><span class="line"></span><br><span class="line">export CLASSPATH=.:$JAVA\_HOME/lib/dt.jar:$JAVA\_HOME/lib/tools.jar</span><br><span class="line"></span><br><span class="line">#HADOOP\_HOME</span><br><span class="line"></span><br><span class="line">export HADOOP\_HOME=/export/server/hadoop-3.3.0 </span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$HADOOP\_HOME/bin:$HADOOP\_HOME/sbin</span><br><span class="line"></span><br><span class="line">#ZOOKEEPER\_HOME</span><br><span class="line"></span><br><span class="line">export ZOOKEEPER\_HOME=/export/server/zookeeper</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$ZOOKEEPER\_HOME/bin</span><br><span class="line"></span><br><span class="line">#SPARK\_HOME</span><br><span class="line"></span><br><span class="line">export SPARK\_HOME=/export/server/spark</span><br><span class="line"></span><br><span class="line">#HADOOP\_CONF\_DIR</span><br><span class="line"></span><br><span class="line">export HADOOP\_CONF\_DIR=$HADOOP\_HOME/etc/hadoop</span><br><span class="line"></span><br><span class="line">#PYSPARK\_PYTHON</span><br><span class="line"></span><br><span class="line">export PYSPARK\_PYTHON=/export/server/anaconda3/envs/pyspark/bin/python</span><br><span class="line"></span><br><span class="line">#KAFKA\_HOME</span><br><span class="line"></span><br><span class="line">export KAFKA\_HOME=/export/server/kafka</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$KAFKA\_HOME/bin</span><br><span class="line"></span><br><span class="line">PYSPARK\_PYTHON和 JAVA\_HOME 需要同样配置在: `/root/.bashrc`中</span><br><span class="line"></span><br><span class="line">vim /root/.bashrc</span><br><span class="line"></span><br><span class="line">#JAVA\_HOME</span><br><span class="line"></span><br><span class="line">export JAVA\_HOME=/export/server/jdk1.8.0\_241  </span><br><span class="line"></span><br><span class="line">#PYSPARK\_PYTHON</span><br><span class="line"></span><br><span class="line">export PYSPARK\_PYTHON=/export/server/anaconda3/envs/pyspark/bin/python</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br><span class="line">![图 138](../images/138.png)</span><br><span class="line">4. 测试</span><br><span class="line"></span><br><span class="line">cd /export/server/anaconda3/envs/pyspark/bin/</span><br><span class="line"></span><br><span class="line">./pyspark</span><br></pre></td></tr></table></figure>
+<img src="/../images/139.png" class="lazyload" data-srcset="/../images/139.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 139"><br>测试命令sc.parallelize([1,2,3,4,5]).map(lambda x: x *10).collect()<br><img src="/../images/140.png" class="lazyload" data-srcset="/../images/140.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 140"></li>
+<li>查看spark：4040端口（192.168.88.151:4040）<br><img src="/../images/141.png" class="lazyload" data-srcset="/../images/141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 141"><br><img src="/../images/142.png" class="lazyload" data-srcset="/../images/142.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 142"><br>打开监控页面后, 可以发现 在程序内仅有一个Driver</li>
 </ol>
-<p>vi &#x2F;etc&#x2F;profile</p>
-<p>#JAVA_HOME</p>
-<p>export JAVA_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;jdk1.8.0_241  </p>
-<p>export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin  </p>
-<p>export CLASSPATH&#x3D;.:$JAVA_HOME&#x2F;lib&#x2F;dt.jar:$JAVA_HOME&#x2F;lib&#x2F;tools.jar</p>
-<p>#HADOOP_HOME</p>
-<p>export HADOOP_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;hadoop-3.3.0 </p>
-<p>export PATH&#x3D;$PATH:$HADOOP_HOME&#x2F;bin:$HADOOP_HOME&#x2F;sbin</p>
-<p>#ZOOKEEPER_HOME</p>
-<p>export ZOOKEEPER_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;zookeeper</p>
-<p>export PATH&#x3D;$PATH:$ZOOKEEPER_HOME&#x2F;bin</p>
-<p>#SPARK_HOME</p>
-<p>export SPARK_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;spark</p>
-<p>#HADOOP_CONF_DIR</p>
-<p>export HADOOP_CONF_DIR&#x3D;$HADOOP_HOME&#x2F;etc&#x2F;hadoop</p>
-<p>#PYSPARK_PYTHON</p>
-<p>export PYSPARK_PYTHON&#x3D;&#x2F;export&#x2F;server&#x2F;anaconda3&#x2F;envs&#x2F;pyspark&#x2F;bin&#x2F;python</p>
-<p>#KAFKA_HOME</p>
-<p>export KAFKA_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;kafka</p>
-<p>export PATH&#x3D;$PATH:$KAFKA_HOME&#x2F;bin</p>
-<p>PYSPARK_PYTHON和 JAVA_HOME 需要同样配置在: <code>/root/.bashrc</code>中</p>
-<p>vim &#x2F;root&#x2F;.bashrc</p>
-<p>#JAVA_HOME</p>
-<p>export JAVA_HOME&#x3D;&#x2F;export&#x2F;server&#x2F;jdk1.8.0_241  </p>
-<p>#PYSPARK_PYTHON</p>
-<p>export PYSPARK_PYTHON&#x3D;&#x2F;export&#x2F;server&#x2F;anaconda3&#x2F;envs&#x2F;pyspark&#x2F;bin&#x2F;python</p>
-<p>source &#x2F;etc&#x2F;profile</p>
-<p>source ~&#x2F;.bashrc<br><img src="/../images/138.png" class="lazyload" data-srcset="/../images/138.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 138"><br>4. 测试</p>
-<p>cd &#x2F;export&#x2F;server&#x2F;anaconda3&#x2F;envs&#x2F;pyspark&#x2F;bin&#x2F;</p>
-<p>.&#x2F;pyspark<br><img src="/../images/139.png" class="lazyload" data-srcset="/../images/139.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 139"><br>测试命令sc.parallelize([1,2,3,4,5]).map(lambda x: x *10).collect()<br><img src="/../images/140.png" class="lazyload" data-srcset="/../images/140.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 140"><br>5. 查看spark：4040端口（192.168.88.151:4040）<br><img src="/../images/141.png" class="lazyload" data-srcset="/../images/141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 141"><br><img src="/../images/142.png" class="lazyload" data-srcset="/../images/142.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 142"><br>打开监控页面后, 可以发现 在程序内仅有一个Driver</p>
 <p>因为我们是Local模式, Driver即管理 又 干活.</p>
 <p>同时, 输入jps<br><img src="/../images/143.png" class="lazyload" data-srcset="/../images/143.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 143"><br>可以看到local模式下的唯一进程存在</p>
 <p>SparkSubmit</p>
@@ -2590,7 +2549,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-11T16:39:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-11T17:29:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jun 11, 2023</p>
@@ -3227,7 +3186,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/09/makedown1/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/09/makedown1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/09/makedown1/","wordCount":0,"datePublished":"2023-06-09T15:38:15.992Z","dateModified":"2023-06-11T08:39:37.659Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/09/makedown1/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/09/makedown1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/09/makedown1/","wordCount":0,"datePublished":"2023-06-09T15:38:15.992Z","dateModified":"2023-06-11T09:29:33.222Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
