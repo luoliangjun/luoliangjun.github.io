@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/06/09/makedown1/"/>
+  <link rel="canonical" href="http://example.com/2023/06/13/pyspark/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -39,13 +39,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2023/06/09/makedown1/index.html">
+<meta property="og:url" content="http://example.com/2023/06/13/pyspark/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="spark（local环境部署）1. Anaconda On Linux 安装 (单台服务器)  上传安装包: Anaconda3-2021.05-Linux-x86_64.sh(路径：&#x2F;export&#x2F;server&#x2F;) 安装: 1sh .&#x2F;Anaconda3-2021.05-Linux-x86\_64.sh &gt;&gt;&gt;     直接回车 –More–">
+<meta property="og:description" content="Spark(PySpark基础环境编码)一、PysSpark1.什么是PySpark1PySpark是Spar官方提供的一个Python类库，内置了完全的Spark API，可以通过PySpark类库来编写Spark应用程序，并将其提交到Spark集群中运行。  2.本机PySpark环境部署（1）将课程资料中提供的:hadoop-3.3.0文件，复制到一个地方，比如我的放在D:\虚拟机\ahad">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-09T15:38:15.992Z">
-<meta property="article:modified_time" content="2023-06-11T09:29:33.222Z">
+<meta property="article:published_time" content="2023-06-13T05:39:53.223Z">
+<meta property="article:modified_time" content="2023-06-13T05:43:26.889Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2111,7 +2111,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1686476127169),
+    lastupdate: new Date(1686635980955),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2442,7 +2442,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/09/makedown1/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/13/pyspark/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Hexo">
   </span>
@@ -2471,60 +2471,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <ol>
-<li><h1 id="spark（local环境部署）"><a href="#spark（local环境部署）" class="headerlink" title="spark（local环境部署）"></a>spark（local环境部署）</h1>1. Anaconda On Linux 安装 (单台服务器)</li>
-</ol>
-<p>上传安装包: Anaconda3-2021.05-Linux-x86_64.sh(路径：&#x2F;export&#x2F;server&#x2F;)</p>
-<p>安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh ./Anaconda3-2021.05-Linux-x86\_64.sh</span><br></pre></td></tr></table></figure>
-<p>&gt;&gt;&gt;     直接回车</p>
-<p>–More–  按空格</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Do you accept the license terms?[yes|no]</span><br><span class="line"></span><br><span class="line">[No] &gt;&gt;&gt;    yes</span><br><span class="line"></span><br><span class="line">[/root/anaconda3] &gt;&gt;&gt;   /export/server/anaconda3</span><br></pre></td></tr></table></figure>
-<p>(这里是问你Anaconda3装在哪里，推荐在&#x2F;export&#x2F;server&#x2F;anaconda3)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">by running conda init? [yes|no]</span><br><span class="line"></span><br><span class="line">[no] &gt;&gt;&gt;   yes  (询问是否要初始化，输入yes)</span><br></pre></td></tr></table></figure>
-<p>安装完成后, 退出finalshell重新进来<br><img src="/../images/130.png" class="lazyload" data-srcset="/../images/130.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 130"><br>看到这个Base开头表明安装好了.</p>
-<p>base是默认的虚拟环境.</p>
-<p>2. Windows系统配置Anaconda</p>
-<p>安装:Anaconda3-2021.05-Windows-x86_64.exe文件,或者去官网下载: [<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads]">https://www.anaconda.com/products/individual#Downloads]</a><br><img src="/../images/130.png" class="lazyload" data-srcset="/../images/130.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 130"><br><img src="/../images/131.png" class="lazyload" data-srcset="/../images/131.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 131"><br><img src="/../images/132.png" class="lazyload" data-srcset="/../images/132.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 132"><br>不必勾选<br><img src="/../images/133.png" class="lazyload" data-srcset="/../images/133.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 133"><br>Finish完成安装<br><img src="/../images/134.png" class="lazyload" data-srcset="/../images/134.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 134"><br><img src="/../images/135.png" class="lazyload" data-srcset="/../images/135.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 135"><br>打开开始菜单, 搜索Anaconda</p>
-<p>出现如图的程序, 安装成功.</p>
-<p>打开Anaconda Prompt  出现bash 安装成功<br><img src="/../images/136.png" class="lazyload" data-srcset="/../images/136.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 136"></p>
-<ol>
-<li>配置国内源</li>
-</ol>
-<p>Anaconda默认源服务器在国外, 网速比较慢, 配置国内源加速网络下载.</p>
-<p>打开上图中的 <code>Anaconda Prompt</code>程序:</p>
-<p>执行:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --set show\_channel\_urls yes</span><br></pre></td></tr></table></figure>
+    <h1 id="Spark-PySpark基础环境编码"><a href="#Spark-PySpark基础环境编码" class="headerlink" title="Spark(PySpark基础环境编码)"></a>Spark(PySpark基础环境编码)</h1><h2 id="一、PysSpark"><a href="#一、PysSpark" class="headerlink" title="一、PysSpark"></a>一、PysSpark</h2><h3 id="1-什么是PySpark"><a href="#1-什么是PySpark" class="headerlink" title="1.什么是PySpark"></a>1.什么是PySpark</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PySpark是Spar官方提供的一个Python类库，内置了完全的Spark API，可以通过PySpark类库来编写Spark应用程序，并将其提交到Spark集群中运行。</span><br></pre></td></tr></table></figure>
 
+<h3 id="2-本机PySpark环境部署"><a href="#2-本机PySpark环境部署" class="headerlink" title="2.本机PySpark环境部署"></a>2.本机PySpark环境部署</h3><h4 id="（1）将课程资料中提供的-hadoop-3-3-0文件，复制到一个地方，比如我的放在D-虚拟机-ahadoop-hadoop-windows-hadoop-3-3-0目录下"><a href="#（1）将课程资料中提供的-hadoop-3-3-0文件，复制到一个地方，比如我的放在D-虚拟机-ahadoop-hadoop-windows-hadoop-3-3-0目录下" class="headerlink" title="（1）将课程资料中提供的:hadoop-3.3.0文件，复制到一个地方，比如我的放在D:\虚拟机\ahadoop\hadoop_windows\hadoop-3.3.0目录下"></a>（1）将课程资料中提供的:hadoop-3.3.0文件，复制到一个地方，比如我的放在D:\虚拟机\ahadoop\hadoop_windows\hadoop-3.3.0目录下</h4><h4 id="（2）将文件夹内bin内的hadoop-dll复制到-C-Windows-System32里面去"><a href="#（2）将文件夹内bin内的hadoop-dll复制到-C-Windows-System32里面去" class="headerlink" title="（2）将文件夹内bin内的hadoop.dll复制到:C:\Windows\System32里面去"></a>（2）将文件夹内bin内的hadoop.dll复制到:C:\Windows\System32里面去</h4><p><img src="/../images/94.jpg" class="lazyload" data-srcset="/../images/94.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h4 id="（3）配置HADOOP-HOME环境变量指向-hadoop-3-3-0文件夹的路径"><a href="#（3）配置HADOOP-HOME环境变量指向-hadoop-3-3-0文件夹的路径" class="headerlink" title="（3）配置HADOOP_HOME环境变量指向 hadoop-3.3.0文件夹的路径"></a>（3）配置HADOOP_HOME环境变量指向 hadoop-3.3.0文件夹的路径</h4><p><img src="/../images/95.jpg" class="lazyload" data-srcset="/../images/95.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h3 id="3-Anaconda的安装"><a href="#3-Anaconda的安装" class="headerlink" title="3.Anaconda的安装"></a>3.Anaconda的安装</h3><h4 id="（1）打开资料中提供的-Anaconda3-202105-Windows-x86-64-exe文件打开后点击Next"><a href="#（1）打开资料中提供的-Anaconda3-202105-Windows-x86-64-exe文件打开后点击Next" class="headerlink" title="（1）打开资料中提供的:Anaconda3-202105-Windows-x86_64.exe文件打开后点击Next"></a>（1）打开资料中提供的:Anaconda3-202105-Windows-x86_64.exe文件打开后点击Next</h4><p><img src="/../images/96.jpg" class="lazyload" data-srcset="/../images/96.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">点击I Agree</span><br></pre></td></tr></table></figure>
 
-<p>然后用记事本打开:</p>
-<p><code>C:\Users\用户名\.condarc</code>文件, 将如下内容替换进文件内,保存即可:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line"></span><br><span class="line">`  `- defaults</span><br><span class="line"></span><br><span class="line">show\_channel\_urls: true</span><br><span class="line"></span><br><span class="line">default\_channels:</span><br><span class="line"></span><br><span class="line">`  `- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line"></span><br><span class="line">`  `- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br><span class="line"></span><br><span class="line">`  `- https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span><br><span class="line"></span><br><span class="line">custom\_channels:</span><br><span class="line"></span><br><span class="line">`  `conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line"></span><br><span class="line">`  `simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
-<p>5. 创建虚拟环境</p>
-<p># 创建虚拟环境 pyspark, 基于Python 3.8</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n pyspark python=3.8</span><br></pre></td></tr></table></figure>
-<p># 切换到虚拟环境内</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate pyspark</span><br></pre></td></tr></table></figure>
-<p># 在虚拟环境内安装包</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyhive pyspark jieba -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
-<p><img src="/../images/137.png" class="lazyload" data-srcset="/../images/137.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 137"></p>
-<ol start="2">
-<li>上传、解压spark安装包</li>
-</ol>
-<p>路径：&#x2F;export&#x2F;server&#x2F;</p>
-<p>上传成功后，解压安装包</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf spark-3.2.0-bin-hadoop3.2.tgz -C /export/server/</span><br></pre></td></tr></table></figure>
-<p>建立软连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /export/server/spark-3.2.0-bin-hadoop3.2 /export/server/spark</span><br></pre></td></tr></table></figure>
-<ol>
-<li>配置环境变量<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line">#JAVA\_HOME</span><br><span class="line"></span><br><span class="line">export JAVA\_HOME=/export/server/jdk1.8.0\_241  </span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$JAVA\_HOME/bin  </span><br><span class="line"></span><br><span class="line">export CLASSPATH=.:$JAVA\_HOME/lib/dt.jar:$JAVA\_HOME/lib/tools.jar</span><br><span class="line"></span><br><span class="line">#HADOOP\_HOME</span><br><span class="line"></span><br><span class="line">export HADOOP\_HOME=/export/server/hadoop-3.3.0 </span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$HADOOP\_HOME/bin:$HADOOP\_HOME/sbin</span><br><span class="line"></span><br><span class="line">#ZOOKEEPER\_HOME</span><br><span class="line"></span><br><span class="line">export ZOOKEEPER\_HOME=/export/server/zookeeper</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$ZOOKEEPER\_HOME/bin</span><br><span class="line"></span><br><span class="line">#SPARK\_HOME</span><br><span class="line"></span><br><span class="line">export SPARK\_HOME=/export/server/spark</span><br><span class="line"></span><br><span class="line">#HADOOP\_CONF\_DIR</span><br><span class="line"></span><br><span class="line">export HADOOP\_CONF\_DIR=$HADOOP\_HOME/etc/hadoop</span><br><span class="line"></span><br><span class="line">#PYSPARK\_PYTHON</span><br><span class="line"></span><br><span class="line">export PYSPARK\_PYTHON=/export/server/anaconda3/envs/pyspark/bin/python</span><br><span class="line"></span><br><span class="line">#KAFKA\_HOME</span><br><span class="line"></span><br><span class="line">export KAFKA\_HOME=/export/server/kafka</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:$KAFKA\_HOME/bin</span><br><span class="line"></span><br><span class="line">PYSPARK\_PYTHON和 JAVA\_HOME 需要同样配置在: `/root/.bashrc`中</span><br><span class="line"></span><br><span class="line">vim /root/.bashrc</span><br><span class="line"></span><br><span class="line">#JAVA\_HOME</span><br><span class="line"></span><br><span class="line">export JAVA\_HOME=/export/server/jdk1.8.0\_241  </span><br><span class="line"></span><br><span class="line">#PYSPARK\_PYTHON</span><br><span class="line"></span><br><span class="line">export PYSPARK\_PYTHON=/export/server/anaconda3/envs/pyspark/bin/python</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">source ~/.bashrc</span><br><span class="line">![图 138](../images/138.png)</span><br><span class="line">4. 测试</span><br><span class="line"></span><br><span class="line">cd /export/server/anaconda3/envs/pyspark/bin/</span><br><span class="line"></span><br><span class="line">./pyspark</span><br></pre></td></tr></table></figure>
-<img src="/../images/139.png" class="lazyload" data-srcset="/../images/139.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 139"><br>测试命令sc.parallelize([1,2,3,4,5]).map(lambda x: x *10).collect()<br><img src="/../images/140.png" class="lazyload" data-srcset="/../images/140.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 140"></li>
-<li>查看spark：4040端口（192.168.88.151:4040）<br><img src="/../images/141.png" class="lazyload" data-srcset="/../images/141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 141"><br><img src="/../images/142.png" class="lazyload" data-srcset="/../images/142.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 142"><br>打开监控页面后, 可以发现 在程序内仅有一个Driver</li>
-</ol>
-<p>因为我们是Local模式, Driver即管理 又 干活.</p>
-<p>同时, 输入jps<br><img src="/../images/143.png" class="lazyload" data-srcset="/../images/143.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 143"><br>可以看到local模式下的唯一进程存在</p>
-<p>SparkSubmit</p>
-<p>这个进程 即是master也是worker</p>
+<p><img src="/../images/97.jpg" class="lazyload" data-srcset="/../images/97.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">点击NEXT</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/98.jpg" class="lazyload" data-srcset="/../images/98.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果想要修改安装路径，可以修改，修改完点击Next</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/99.jpg" class="lazyload" data-srcset="/../images/99.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不勾选，点击Install</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/100.jpg" class="lazyload" data-srcset="/../images/100.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h4 id="（2）去官网下载-https-www-anaconda-com-products-individual-Downloads"><a href="#（2）去官网下载-https-www-anaconda-com-products-individual-Downloads" class="headerlink" title="（2）去官网下载[https://www.anaconda.com/products/individual#Downloads]"></a>（2）去官网下载[<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual#Downloads]">https://www.anaconda.com/products/individual#Downloads]</a></h4><h4 id="（3）配置国内源"><a href="#（3）配置国内源" class="headerlink" title="（3）配置国内源"></a>（3）配置国内源</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Anaconda默认源服务器在国外, 网速比较慢, 配置国内源加速网络下载。打开Anaconda Prompt程序，执行：</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line">然后用记事本打开：</span><br><span class="line">C:\Users\用户名\.condarc文件，将如下内容替换进文件内，保存即可：</span><br><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">default_channels:</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br><span class="line">  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/101.jpg" class="lazyload" data-srcset="/../images/101.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h4 id="（4）创建虚拟环境"><a href="#（4）创建虚拟环境" class="headerlink" title="（4）创建虚拟环境"></a>（4）创建虚拟环境</h4><p><img src="/../images/102.jpg" class="lazyload" data-srcset="/../images/102.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 创建虚拟环境 pyspark, 基于Python 3.8</span><br><span class="line">conda create -n pyspark python=3.8</span><br><span class="line"># 切换到虚拟环境内</span><br><span class="line">conda activate pyspark</span><br><span class="line"># 在虚拟环境内安装包</span><br><span class="line">pip install pyhive pyspark jieba -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/103.jpg" class="lazyload" data-srcset="/../images/103.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h3 id="4-PySpark安装"><a href="#4-PySpark安装" class="headerlink" title="4.PySpark安装"></a>4.PySpark安装</h3><h4 id="PySpark是Python标准类库，可以通过Python自带的pip程序进行安装或者Anaconda的库安装-conda-，在合适的虚拟环境下-课程使用pyspark这个虚拟环境-，执行如下命令即可安装："><a href="#PySpark是Python标准类库，可以通过Python自带的pip程序进行安装或者Anaconda的库安装-conda-，在合适的虚拟环境下-课程使用pyspark这个虚拟环境-，执行如下命令即可安装：" class="headerlink" title="PySpark是Python标准类库，可以通过Python自带的pip程序进行安装或者Anaconda的库安装(conda)，在合适的虚拟环境下(课程使用pyspark这个虚拟环境)，执行如下命令即可安装："></a>PySpark是Python标准类库，可以通过Python自带的pip程序进行安装或者Anaconda的库安装(conda)，在合适的虚拟环境下(课程使用pyspark这个虚拟环境)，执行如下命令即可安装：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyspark -i https://pypi.tuna.tsinghua.edu.cn/simple或者conda install pyspark</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、PyCharm配置Python解释器"><a href="#二、PyCharm配置Python解释器" class="headerlink" title="二、PyCharm配置Python解释器"></a>二、PyCharm配置Python解释器</h2><h3 id="1-配置本地解释器"><a href="#1-配置本地解释器" class="headerlink" title="1.配置本地解释器"></a>1.配置本地解释器</h3><p><img src="/../images/104.jpg" class="lazyload" data-srcset="/../images/104.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h3 id="2-配置远程SSH-Linux解释器"><a href="#2-配置远程SSH-Linux解释器" class="headerlink" title="2.配置远程SSH Linux解释器"></a>2.配置远程SSH Linux解释器</h3><p>（1）设置远程SSH python pySpark 环境<br><img src="/../images/105.jpg" class="lazyload" data-srcset="/../images/105.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br><img src="/../images/106.jpg" class="lazyload" data-srcset="/../images/106.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br>（2）添加新的远程连接<br><img src="/../images/107.jpg" class="lazyload" data-srcset="/../images/107.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br><img src="/../images/108.jpg" class="lazyload" data-srcset="/../images/108.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br>（3）设置虚拟机Python环境路径<br><img src="/../images/109.jpg" class="lazyload" data-srcset="/../images/109.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br><img src="/../images/110.jpg" class="lazyload" data-srcset="/../images/110.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h3 id="3-WordCount代码实战"><a href="#3-WordCount代码实战" class="headerlink" title="3.WordCount代码实战"></a>3.WordCount代码实战</h3><p>（1）本地准备文件word.txt<br><img src="/../images/111.jpg" class="lazyload" data-srcset="/../images/111.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br>（2）切换到远程SSH 解释器执行(在Linux系统上执行)<br><img src="/../images/112.jpg" class="lazyload" data-srcset="/../images/112.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br>刚开始安装的是pyspark版本3.4.0，课程要求，需要修改为3.2.0。在node2中执行：<br>conda activate pyspark<br>pip uninstall pyspark<br>pip install pyspark&#x3D;&#x3D;3.2.0 -i <a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a><br><img src="/../images/113.jpg" class="lazyload" data-srcset="/../images/113.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br><img src="/../images/114.jpg" class="lazyload" data-srcset="/../images/114.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br>（3）执行结果如下：<br><img src="/../images/115.jpg" class="lazyload" data-srcset="/../images/115.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h3 id="4-从HDFS读取数据"><a href="#4-从HDFS读取数据" class="headerlink" title="4.从HDFS读取数据"></a>4.从HDFS读取数据</h3><p>（1）上传数据到HDFS中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -put word.txt /input/words.txt</span><br><span class="line">hadoop fs -ls /input</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/116.jpg" class="lazyload" data-srcset="/../images/116.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"><br>（2）在Hadoop集群上运行</p>
+<pre><code># 读取文件
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file_rdd = sc.textFile(&quot;hdfs://node1:8020/input/words.txt&quot;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>（3）执行效果图：<br><img src="/../images/117.jpg" class="lazyload" data-srcset="/../images/117.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
+<h3 id="除此之外，还在本地执行了这个程序"><a href="#除此之外，还在本地执行了这个程序" class="headerlink" title="除此之外，还在本地执行了这个程序"></a>除此之外，还在本地执行了这个程序</h3><p>（1）读取本地文件<br>    # 读取文件</p>
+<pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file_rdd = sc.textFile(&quot;C:\\Users\\20538\\PycharmProjects\\Spark\\data\\input\\words.txt&quot;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>（2）执行效果图：<br><img src="/../images/118.jpg" class="lazyload" data-srcset="/../images/118.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图 30"></p>
 
   </div>
   
@@ -2549,10 +2536,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-11T17:29:33+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-13T13:43:26+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 11, 2023</p>
+    <p>更新于：Jun 13, 2023</p>
   </a>
 </div>
 
@@ -2571,7 +2558,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/09/makedown1/&title= - Hexo&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/13/pyspark/&title= - Hexo&summary="
           
           >
           
@@ -2583,7 +2570,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/09/makedown1/&title= - Hexo&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/13/pyspark/&title= - Hexo&summary="
           
           >
           
@@ -2595,7 +2582,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/09/makedown1/&title= - Hexo&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/13/pyspark/&title= - Hexo&summary="
           
           >
           
@@ -2628,10 +2615,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2023/06/13/ha/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>spark（HA环境部署）</p>
+          <p class='content'>spark（HA环境部署）前提: 确保Zookeeper 和 HDFS 均已经启动
+先在spark-env.sh中, 删除: SPARK\_MASTER\_HOST=node1原因: 配置文件中...</p>
+        </a>
       
-        <a class='next' href='/2023/06/09/makedown/'>
-          <p class='title'>Jun 9, 2023<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>hive安装（1）mysql的部署1.下载并安装MySQL官方的 Yum Repository1#wget-i-chttp://dev.mysql.com/get/mysql57-communi...</p>
+      
+        <a class='next' href='/2023/06/13/standalone/'>
+          <p class='title'>Jun 13, 2023<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>spark（StandAlone环境部署）进入到spark的配置文件目录中, cd  spark&#x2F;conf
+配置workers文件:
+改名, 去掉后面的.template后缀
+1mv ...</p>
         </a>
       
     </div>
@@ -2650,7 +2646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/06/09/makedown1/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/13/pyspark/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2692,7 +2688,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81PysSpark"><span class="toc-text">一、PysSpark</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFPySpark"><span class="toc-text">1.什么是PySpark</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9C%AC%E6%9C%BAPySpark%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2"><span class="toc-text">2.本机PySpark环境部署</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%B0%86%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%96%99%E4%B8%AD%E6%8F%90%E4%BE%9B%E7%9A%84-hadoop-3-3-0%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A4%8D%E5%88%B6%E5%88%B0%E4%B8%80%E4%B8%AA%E5%9C%B0%E6%96%B9%EF%BC%8C%E6%AF%94%E5%A6%82%E6%88%91%E7%9A%84%E6%94%BE%E5%9C%A8D-%E8%99%9A%E6%8B%9F%E6%9C%BA-ahadoop-hadoop-windows-hadoop-3-3-0%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="toc-text">（1）将课程资料中提供的:hadoop-3.3.0文件，复制到一个地方，比如我的放在D:\虚拟机\ahadoop\hadoop_windows\hadoop-3.3.0目录下</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B0%86%E6%96%87%E4%BB%B6%E5%A4%B9%E5%86%85bin%E5%86%85%E7%9A%84hadoop-dll%E5%A4%8D%E5%88%B6%E5%88%B0-C-Windows-System32%E9%87%8C%E9%9D%A2%E5%8E%BB"><span class="toc-text">（2）将文件夹内bin内的hadoop.dll复制到:C:\Windows\System32里面去</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E9%85%8D%E7%BD%AEHADOOP-HOME%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%8C%87%E5%90%91-hadoop-3-3-0%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E8%B7%AF%E5%BE%84"><span class="toc-text">（3）配置HADOOP_HOME环境变量指向 hadoop-3.3.0文件夹的路径</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Anaconda%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-text">3.Anaconda的安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%89%93%E5%BC%80%E8%B5%84%E6%96%99%E4%B8%AD%E6%8F%90%E4%BE%9B%E7%9A%84-Anaconda3-202105-Windows-x86-64-exe%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E5%90%8E%E7%82%B9%E5%87%BBNext"><span class="toc-text">（1）打开资料中提供的:Anaconda3-202105-Windows-x86_64.exe文件打开后点击Next</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%8E%BB%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD-https-www-anaconda-com-products-individual-Downloads"><span class="toc-text">（2）去官网下载[https:&#x2F;&#x2F;www.anaconda.com&#x2F;products&#x2F;individual#Downloads]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E9%85%8D%E7%BD%AE%E5%9B%BD%E5%86%85%E6%BA%90"><span class="toc-text">（3）配置国内源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-text">（4）创建虚拟环境</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-PySpark%E5%AE%89%E8%A3%85"><span class="toc-text">4.PySpark安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#PySpark%E6%98%AFPython%E6%A0%87%E5%87%86%E7%B1%BB%E5%BA%93%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87Python%E8%87%AA%E5%B8%A6%E7%9A%84pip%E7%A8%8B%E5%BA%8F%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85%E6%88%96%E8%80%85Anaconda%E7%9A%84%E5%BA%93%E5%AE%89%E8%A3%85-conda-%EF%BC%8C%E5%9C%A8%E5%90%88%E9%80%82%E7%9A%84%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E4%B8%8B-%E8%AF%BE%E7%A8%8B%E4%BD%BF%E7%94%A8pyspark%E8%BF%99%E4%B8%AA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83-%EF%BC%8C%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%8D%B3%E5%8F%AF%E5%AE%89%E8%A3%85%EF%BC%9A"><span class="toc-text">PySpark是Python标准类库，可以通过Python自带的pip程序进行安装或者Anaconda的库安装(conda)，在合适的虚拟环境下(课程使用pyspark这个虚拟环境)，执行如下命令即可安装：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81PyCharm%E9%85%8D%E7%BD%AEPython%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-text">二、PyCharm配置Python解释器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-text">1.配置本地解释器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E8%BF%9C%E7%A8%8BSSH-Linux%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-text">2.配置远程SSH Linux解释器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-WordCount%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%88%98"><span class="toc-text">3.WordCount代码实战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BB%8EHDFS%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-text">4.从HDFS读取数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%A4%E6%AD%A4%E4%B9%8B%E5%A4%96%EF%BC%8C%E8%BF%98%E5%9C%A8%E6%9C%AC%E5%9C%B0%E6%89%A7%E8%A1%8C%E4%BA%86%E8%BF%99%E4%B8%AA%E7%A8%8B%E5%BA%8F"><span class="toc-text">除此之外，还在本地执行了这个程序</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3186,7 +3182,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/09/makedown1/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/09/makedown1/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/09/makedown1/","wordCount":0,"datePublished":"2023-06-09T15:38:15.992Z","dateModified":"2023-06-11T09:29:33.222Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Hexo"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/13/pyspark/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Hexo","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Hexo","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/13/pyspark/"},"author":{"@type":"Person","name":"John Doe","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Hexo","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/13/pyspark/","wordCount":0,"datePublished":"2023-06-13T05:39:53.223Z","dateModified":"2023-06-13T05:43:26.889Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
